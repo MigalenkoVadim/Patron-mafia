@@ -1,52 +1,259 @@
 import obj from '../data/games.json';
-let allGames = 226;
+let allGames = 117;
 let ratingPlayers = [];
 let nonRatingPlayers = [];
 let redWins = 0;
 let blackWins = 0;
 
-playerRow("Аврора", 4);
-playerRow("Янг", 43);
-playerRow("Ворон", 7);
-playerRow("Лион", 75);
-playerRow("Флэш", 95);
-playerRow("Валерун-Балерун", 69);
-playerRow("awd2", 2);
-playerRow("Хулиган", 11);
-playerRow("Герда");
-playerRow("Шут", 10);
-playerRow("Бильбо", 21);
-playerRow("Крис", 18);
-playerRow("Зверь", 13);
-playerRow("Крузенштерн");
-playerRow("Артик", 22);
-playerRow("Архи", 1);
-playerRow("Remedy", 9);
-playerRow("Кошка");
-playerRow("Алиот", 88);
-playerRow("Киндер", 5);
-playerRow("Сова");
-playerRow("ВМТ");
-playerRow("Тихий", 96);
-playerRow("Жнец");
-playerRow("Маг", 99);
-playerRow("Физик");
-playerRow("Зодиак");
-playerRow("Алекс");
-playerRow("Арбузик");
-playerRow("Хорист");
-playerRow("Classika");
-playerRow("Шарлотта");
-playerRow("Плесень");
-playerRow("Маузер");
-playerRow("Шико");
-playerRow("Пиковый валет");
-playerRow("Блэйн");
-playerRow("Michael");
-playerRow("Коржик");
-playerRow("Sky");
+playerRow("Опер");
+playerRow("Ёж");
+playerRow("Самбука");
+playerRow("Аlex Red");
 
-export function playerRow(nick, num) {
+playerRow("Светлячок");
+playerRow("Керри");
+
+playerRow("Мэлс");
+
+playerRow("Пианист");
+
+playerRow("Пряник");
+
+playerRow("Нео");
+
+playerRow("Тургенев");
+
+playerRow("Дон Кихот");
+
+playerRow("Жёлтый");
+
+playerRow("Жена");
+
+playerRow("Седой");
+
+playerRow("Маваши");
+
+playerRow("Славик");
+
+playerRow("Харви");
+
+playerRow("Гермес");
+
+playerRow("Бернинг");
+
+playerRow("Флеш");
+
+playerRow("Самаритянка");
+
+playerRow("Вертинский");
+
+playerRow("Элис");
+
+playerRow("Никки");
+
+playerRow("Мишка");
+
+playerRow("Деменция");
+
+playerRow("Сова");
+
+playerRow("Alice");
+
+playerRow("Мак-Магон");
+
+playerRow("Долорес");
+
+playerRow("Микки");
+
+playerRow("Жаклин");
+
+playerRow("Ронни");
+
+playerRow("Баламут");
+
+playerRow("Фантом");
+
+playerRow("Омон");
+
+playerRow("Вега");
+
+playerRow("Черника");
+
+playerRow("Yoda");
+
+playerRow("Мастер");
+
+playerRow("Смайлик");
+
+playerRow("Слайм");
+
+playerRow("Фрозен");
+
+playerRow("Каренина");
+
+playerRow("Кармелитка");
+
+playerRow("Сантос");
+
+playerRow("Кофе");
+
+playerRow("Капучино");
+
+playerRow("Миледи");
+
+playerRow("Мюри");
+
+playerRow("Эльза");
+
+playerRow("Q");
+
+playerRow("Симба");
+
+playerRow("Альпачино");
+
+playerRow("Стейси");
+
+playerRow("Alex Red");
+playerRow("Alex");
+
+playerRow("Зодиак");
+
+playerRow("Кристи");
+
+playerRow("Что-нибудь");
+
+playerRow("Fox");
+
+playerRow("Созерцающий");
+
+playerRow("Граф Монте-Кристо");
+
+playerRow("Сантехник");
+
+playerRow("Вустер");
+
+playerRow("Белла");
+
+playerRow("Ассоль");
+
+playerRow("Юстас");
+
+playerRow("Пончик");
+
+playerRow("Кэрри");
+
+playerRow("Майор");
+
+playerRow("Хасан");
+
+playerRow("Мосби");
+
+playerRow("Джонс");
+
+playerRow("Донскoff");
+
+playerRow("Правда");
+
+playerRow("Чашка");
+playerRow("Мерида");
+
+playerRow("Повелитель Шаров");
+
+playerRow("Вэйд");
+
+playerRow("Кushtar-star");
+
+playerRow("Боттичелли");
+
+playerRow("Шурик");
+
+playerRow("Классик");
+
+playerRow("Backspace");
+
+playerRow("Собака");
+
+playerRow("Blackman");
+
+playerRow("Ариец");
+
+playerRow("МакSим");
+
+playerRow("Леха");
+
+playerRow("Витаминка");
+
+playerRow("Щегол");
+
+playerRow("Кот");
+
+playerRow("Сатурн");
+
+playerRow("Гансалес");
+
+playerRow("Энгри Доги-Дог");
+
+playerRow("Антон");
+
+playerRow("Еж");
+
+playerRow("Фриц");
+
+playerRow("Алиса");
+
+playerRow("Батон");
+
+playerRow("Мистер Грин");
+
+playerRow("Бон");
+
+playerRow("Слон");
+
+playerRow("Тутси");
+
+playerRow("Оборотень");
+
+playerRow("Эйк");
+
+playerRow("Шед");
+
+playerRow("Америка");
+
+playerRow("Ауф");
+
+playerRow("Сэм");
+
+playerRow("Эспаньола");
+
+playerRow("Желанная");
+
+playerRow("Алекс");
+
+playerRow("Летом");
+
+playerRow("Эмили");
+
+playerRow("Законник");
+
+playerRow("Бандитка");
+
+playerRow("Ветерок");
+
+playerRow("Шпион");
+
+playerRow("Вавилон");
+
+playerRow("Вандам");
+
+playerRow("Колледжио");
+
+playerRow("Изи-Бризи");
+
+playerRow("Джовани");
+playerRow("Аспин");
+
+
+export function playerRow(nick) {
     let player = {};
     let number = 0, games = 0, wins = 0, sher = 0, sherWins = 0, mir = 0, mirWins = 0, don = 0, donWins = 0, maf = 0, mafWins = 0, py = 0, lx = 0, points = 0, result = 0;
     for (let i = 1; i <= allGames; i++) {
@@ -82,43 +289,7 @@ export function playerRow(nick, num) {
         points = wins + +(lx);
         result = Math.round(points/games * 10000)/100;
     }
-    if (num && Math.floor(allGames/5) > games) {
-        player.code = `<tr class='gray'>
-            <td class='nick'><p>${nick}</p><p class='num gray'>${num}</p></td>
-            <td class='games'>${games}</td>
-            <td class='wins'>${wins}</td>
-            <td class='sher'>${sher}</td>
-            <td class='sher-wins'>${sherWins}</td>
-            <td class='mir'>${mir}</td>
-            <td class='mir-wins'>${mirWins}</td>
-            <td class='don'>${don}</td>
-            <td class='don-wins'>${donWins}</td>
-            <td class='maf'>${maf}</td>
-            <td class='maf-wins'>${mafWins}</td>
-            <td class='py'>${py}</td>
-            <td class='lx'>${lx}</td>
-            <td class='points'>${points}</td>
-            <td class='result'>${result}</td>
-        </tr>`;
-    } else if (num){
-        player.code = `<tr>
-            <td class='nick'><p>${nick}</p><p class='num'>${num}</p></td>
-            <td class='games'>${games}</td>
-            <td class='wins'>${wins}</td>
-            <td class='sher'>${sher}</td>
-            <td class='sher-wins'>${sherWins}</td>
-            <td class='mir'>${mir}</td>
-            <td class='mir-wins'>${mirWins}</td>
-            <td class='don'>${don}</td>
-            <td class='don-wins'>${donWins}</td>
-            <td class='maf'>${maf}</td>
-            <td class='maf-wins'>${mafWins}</td>
-            <td class='py'>${py}</td>
-            <td class='lx'>${lx}</td>
-            <td class='points'>${points}</td>
-            <td class='result'>${result}</td>
-        </tr>`;
-    } else if (allGames/5 > games){
+    if (allGames*0.15> games){
         player.code = `<tr class='gray'>
             <td class='nick'>${nick}</td>
             <td class='games'>${games}</td>
@@ -171,8 +342,8 @@ export function playerRow(nick, num) {
     player.lx = lx;
     player.points = points;
     player.result = result;
-    player.num = num;
-    if (Math.floor(allGames/5) <= games) {
+
+    if (allGames*0.15 <= games) {
         ratingPlayers.push(player);
     } else if (allGames/20 <= games){
         nonRatingPlayers.push(player);

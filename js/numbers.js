@@ -3,9 +3,9 @@ import obj from '../data/games.json';
 
 export function numberStat() {
     for (let i = 1; i < ratingPlayers.length; i++) {
- 
+
         for (let j = 1; j < ratingPlayers.length; j++) {
-     
+
             if( ratingPlayers[j].value > ratingPlayers[j-1].value ){
                 var temp = ratingPlayers[j];
                 ratingPlayers[j] = ratingPlayers[j-1];
@@ -51,7 +51,7 @@ export function numberStat() {
         }
         $('.numbers').append(`
             <tr class='row ${nick}'>
-                <td class='${ratingPlayers[i].nick} nick'><p>${ratingPlayers[i].nick}</p><p class='num'>${ratingPlayers[i].num}</p></td>
+                <td class='${ratingPlayers[i].nick} nick'><p>${ratingPlayers[i].nick}</p></td>
                 <td>${winsArr[0]}/${gamesArr[0]}</td>
                 <td>${winsArr[1]}/${gamesArr[1]}</td>
                 <td>${winsArr[2]}/${gamesArr[2]}</td>
@@ -81,8 +81,7 @@ export function numberStat() {
             } else if (winsArr[i]/gamesArr[i] == 1) {
                 $(`.${nick} td:nth-child(${box})`).css('background', 'rgba(0, 255, 0, 1)');
             }
-            
+
         }
-        ratingPlayers[i].num == undefined ? $(`.${ratingPlayers[i].nick}:nth-child(1)`).html(`<p>${ratingPlayers[i].nick}</p>`) : '';
     }
 }

@@ -68,7 +68,7 @@ export function createRatedTable() {
     for (let i = 0; i < ratingPlayers.length; i++) {
         $('.roles-table').append(`
             <tr class='row'>
-                <td class='${ratingPlayers[i].nick} nick'><p>${ratingPlayers[i].nick}</p><p class='num'>${ratingPlayers[i].num}</p></td>
+                <td class='${ratingPlayers[i].nick} nick'><p>${ratingPlayers[i].nick}</p></td>
                 <td class='${ratingPlayers[i].nick}'><p class='parity'>${ratingPlayers[i].py}/${+ratingPlayers[i].mir + +ratingPlayers[i].sher}</p> <p class='percent'>${(Math.round((+ratingPlayers[i].py / (+ratingPlayers[i].mir + +ratingPlayers[i].sher))*1000)/10).toFixed(1)}%</p></td>
                 <td class='${ratingPlayers[i].nick}'><p class='parity'>${ratingPlayers[i].sherWins}/${+ratingPlayers[i].sher}</p><p class='percent'>${(Math.round(+ratingPlayers[i].sherWins / (+ratingPlayers[i].sher)*10000)/100).toFixed(1)}%</p></td>
                 <td class='${ratingPlayers[i].nick}'><p class='parity'>${ratingPlayers[i].mirWins}/${+ratingPlayers[i].mir}</p><p class='percent'>${(Math.round(+ratingPlayers[i].mirWins / (+ratingPlayers[i].mir)*10000)/100).toFixed(1)}%</p></td>
@@ -81,7 +81,6 @@ export function createRatedTable() {
         ratingPlayers[i].maf == 0 ? $(`.${ratingPlayers[i].nick}:nth-child(6) .percent`).html('-') : '';
         ratingPlayers[i].sher == 0 ? $(`.${ratingPlayers[i].nick}:nth-child(3) .percent`).html('-') : '';
         ratingPlayers[i].py == 0 ? $(`.${ratingPlayers[i].nick}:nth-child(2) .percent`).html('-') : '';
-        ratingPlayers[i].num == undefined ? $(`.${ratingPlayers[i].nick}:nth-child(1)`).html(`<p>${ratingPlayers[i].nick}</p>`) : '';
     }
     topRatePY();
     topRateDon();
